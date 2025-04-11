@@ -10,6 +10,9 @@ import sql from "../assets/service/sql.jpg";
 import consultancy from "../assets/service/consultancy.jpg";
 
 export default function OurServices() {
+  useEffect(()=>{
+      document.title = "Services"
+    }, [])
   return (
     <RootLayout>
       <div className="bg-gradient-to-t from-blue-950 to-gray-200 min-h-screen p-8">

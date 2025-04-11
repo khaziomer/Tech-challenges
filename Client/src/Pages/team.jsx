@@ -49,6 +49,9 @@ export default function Team() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(()=>{
+      document.title = "Team"
+    }, [])
 
   return (
     <RootLayout>

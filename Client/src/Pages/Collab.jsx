@@ -36,6 +36,9 @@ export default function Collab() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(()=>{
+      document.title = "Collabration"
+    }, [])
 
   return (
     <RootLayout>
