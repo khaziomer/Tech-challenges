@@ -1,5 +1,6 @@
 import React from "react";
 import RootLayout from "../Layout";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 import logo1 from "../assets/collab_comp/logo1.png";
 import logo2 from "../assets/collab_comp/logo2.png";
 import logo3 from "../assets/collab_comp/logo3.png";
@@ -26,13 +27,13 @@ import logo23 from "../assets/collab_comp/logo23.png";
 import logo24 from "../assets/collab_comp/logo24.png";
 
 const projects = [
-  { name: "Project Alpha", image: logo1 },
-  { name: "Project Beta", image: logo2 },
-  { name: "Project Gamma", image: logo3 },
-  { name: "Project Delta", image: logo4 },
-  { name: "Project Epsilon", image: logo5 },
-  { name: "Project Zeta", image: logo6 },
-  { name: "Project Eta", image: logo7 },
+  { name: "Majid Al futtaim", image: logo1 },
+  { name: "Sloex Plus", image: logo2 },
+  { name: "Landmark Group", image: logo3 },
+  { name: "Axelerated Soultions", image: logo4 },
+  { name: "VOX Cinemas", image: logo5 },
+  { name: "Othaim", image: logo6 },
+  { name: "PNU", image: logo7 },
   { name: "Project Theta", image: logo8 },
   { name: "Project Iota", image: logo9 },
   { name: "Project Kappa", image: logo10 },
@@ -53,15 +54,17 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { t } = useTranslation(); // Initialize translation hook
+
   return (
     <RootLayout>
       <div className="bg-gradient-to-t from-blue-950 to-gray-200 min-h-screen p-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-center text-blue-950 mb-8 bg-white p-4 rounded-lg shadow-md">
-            Our Projects
+            {t("project.heading")}
           </h1>
           <p className="text-lg text-gray-700 mb-8 text-center bg-white p-4 rounded-lg shadow-md">
-            These are some of the esteemed companies with whom we have successfully completed our projects.
+            {t("project.description")}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -70,7 +73,7 @@ export default function Projects() {
                 key={index}
                 className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:bg-white transition-all duration-300"
               >
-                <div className={`mb-4 ${index < 17 ? 'w-56 h-56' : 'w-48 h-48'}`}>
+                <div className={`mb-4 ${index < 17 ? "w-56 h-56" : "w-48 h-48"}`}>
                   <img
                     src={project.image}
                     alt={project.name}

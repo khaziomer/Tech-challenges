@@ -8,8 +8,10 @@ import {
   ArrowUp,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 export default function Footer() {
+  const { t } = useTranslation(); // Initialize translation hook
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -39,12 +41,9 @@ export default function Footer() {
           {/* Company info */}
           <div className="col-span-1 md:col-span-1">
             <h2 className="text-2xl font-bold mb-4">
-              Tech<span className="text-secondary"> Challenges</span>
+              {t("footer.company_name")}
             </h2>
-            <p className="mb-4 text-gray-800">
-              Leading technology solutions provider in Saudi Arabia, helping
-              businesses transform through innovative digital solutions.
-            </p>
+            <p className="mb-4 text-gray-800">{t("footer.company_description")}</p>
             <div className="flex space-x-5 justify-center">
               <a
                 href="#"
@@ -69,14 +68,14 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h3 className="text-lg font-semibold mb-5">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-5">{t("footer.quick_links")}</h3>
             <ul className="list-disc list-inside space-y-2">
               <li>
                 <a
                   href="/team"
                   className="text-blue-950 hover:text-gray-400 transition-colors"
                 >
-                  Team
+                  {t("footer.links.team")}
                 </a>
               </li>
               <li>
@@ -84,7 +83,7 @@ export default function Footer() {
                   href="/about"
                   className="text-blue-950 hover:text-gray-400 transition-colors"
                 >
-                  About Us
+                  {t("footer.links.about")}
                 </a>
               </li>
               <li>
@@ -92,7 +91,7 @@ export default function Footer() {
                   href="/contact"
                   className="text-blue-950 hover:text-gray-400 transition-colors"
                 >
-                  Contact Us
+                  {t("footer.links.contact")}
                 </a>
               </li>
               <li>
@@ -100,7 +99,7 @@ export default function Footer() {
                   href="/projects"
                   className="text-blue-950 hover:text-gray-400 transition-colors"
                 >
-                  Projects
+                  {t("footer.links.projects")}
                 </a>
               </li>
               <li>
@@ -108,7 +107,7 @@ export default function Footer() {
                   href="/services"
                   className="text-blue-950 hover:text-gray-400 transition-colors"
                 >
-                  Our Services
+                  {t("footer.links.services")}
                 </a>
               </li>
               <li>
@@ -116,7 +115,7 @@ export default function Footer() {
                   href="/collab"
                   className="text-blue-950 hover:text-gray-400 transition-colors"
                 >
-                  Connections
+                  {t("footer.links.connections")}
                 </a>
               </li>
             </ul>
@@ -124,16 +123,14 @@ export default function Footer() {
 
           {/* Contact info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.contact_us")}</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin
                   size={20}
                   className="mr-2 text-secondary flex-shrink-0 mt-1"
                 />
-                <span className="text-blue-950">
-                  : Riyadh, Kingdom of Saudi Arabia
-                </span>
+                <span className="text-blue-950">{t("footer.contact.address")}</span>
               </li>
               <li className="flex items-center">
                 <Phone
@@ -144,7 +141,7 @@ export default function Footer() {
                   href="tel:+966(11)2885656"
                   className="text-blue-950 hover:text-red-300"
                 >
-                  : +966 (11) 288 5656
+                  {t("footer.contact.phone")}
                 </a>
               </li>
               <li className="flex items-center">
@@ -153,7 +150,7 @@ export default function Footer() {
                   href="mailto:info@techchallenges.sa"
                   className="text-blue-950 hover:text-red-300"
                 >
-                  : info@techchallenges.sa
+                  {t("footer.contact.email")}
                 </a>
               </li>
             </ul>
@@ -161,7 +158,7 @@ export default function Footer() {
 
           {/* Google Map */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Our Location</h3>
+            <h3 className="text-xl font-semibold mb-6">{t("footer.location")}</h3>
             <div className="w-full h-52 border rounded-lg overflow-hidden shadow-md">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.123456789012!2d46.709156!3d24.66323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03e2f03e2f03%3A0x3e2f03e2f03e2f03!2s24%C2%B039'47.6%22N+46%C2%B042'33.0%22E!5e0!3m2!1sen!2s!4v1611234567890!5m2!1sen!2s"
@@ -179,8 +176,7 @@ export default function Footer() {
 
         <div className="border-t border-opacity-20 border-gray-600 mt-10 pt-8 text-center text-blue-950">
           <p>
-            &copy; {new Date().getFullYear()} Tech Challenges. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {t("footer.copyright")}
           </p>
         </div>
       </div>

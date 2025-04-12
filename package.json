@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "framer-motion": "^12.5.0",
+    "i18next": "^24.2.3",
+    "i18next-browser-languagedetector": "^8.0.4",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^15.4.1",
     "react-router-dom": "^7.3.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",

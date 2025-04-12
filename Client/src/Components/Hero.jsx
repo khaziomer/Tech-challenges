@@ -1,20 +1,24 @@
+"use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import img1 from "../assets/img1.jpg";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [text, setText] = useState("");
-  const tagline = "Empowering Minds | Building Innovative Solutions";
+
+  const fullTagline = t("hero.tagline");
 
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
-      setText(tagline.slice(0, index));
+      setText(fullTagline.slice(0, index));
       index++;
-      if (index > tagline.length) clearInterval(interval);
+      if (index > fullTagline.length) clearInterval(interval);
     }, 100);
     return () => clearInterval(interval);
-  }, []);
+  }, [fullTagline]); // re-run when language changes
 
   const Button = ({ children, ...props }) => (
     <button
@@ -38,7 +42,7 @@ export default function Hero() {
             transition={{ duration: 1 }}
             className="text-4xl md:text-6xl font-extrabold mb-4"
           >
-            Tech Challenges
+            {t("hero.title")}
           </motion.h1>
 
           <motion.h2
@@ -51,9 +55,7 @@ export default function Hero() {
           </motion.h2>
 
           <p className="text-gray-200 text-base md:text-lg mb-6">
-            We help transform complex challenges into innovative digital
-            solutions for businesses, startups, and individuals. Join us in
-            building smarter, future-ready technologies.
+            {t("hero.description")}
           </p>
         </div>
 

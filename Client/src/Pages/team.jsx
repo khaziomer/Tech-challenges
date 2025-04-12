@@ -1,67 +1,71 @@
-import React, { useEffect } from 'react';
-import RootLayout from '../Layout';
-import img from '../assets/img1.jpg'
+import React, { useEffect } from "react";
+import RootLayout from "../Layout";
+import { useTranslation } from "react-i18next"; // Import useTranslation
+import img from "../assets/img1.jpg";
 
 const teamMembers = [
   {
-    name: 'Ahmed Mohiuddin Khazi',
-    role: 'CEO',
+    name: "Ahmed Mohiuddin Khazi",
+    role: "CEO",
     image: img,
   },
   {
-    name: 'Omer',
-    role: 'CTO',
+    name: "Omer",
+    role: "CTO",
     image: img,
   },
   {
-    name: 'Khaled Khuddus',
-    role: 'HR',
+    name: "Khaled Khuddus",
+    role: "HR",
     image: img,
   },
   {
-    name: 'Shahed Khazi',
-    role: 'Supervisor',
+    name: "Shahed Khazi",
+    role: "Supervisor",
     image: img,
   },
   {
-    name: 'Abdul Sattar',
-    role: 'Supervisor',
+    name: "Abdul Sattar",
+    role: "Supervisor",
     image: img,
   },
   {
-    name: 'Yaqoob',
-    role: 'Accountant',
+    name: "Yaqoob",
+    role: "Accountant",
     image: img,
   },
   {
-    name: 'Hafeez',
-    role: 'PMO',
+    name: "Hafeez",
+    role: "PMO",
     image: img,
   },
   {
-    name: 'Obeid',
-    role: 'PMO',
+    name: "Obeid",
+    role: "PMO",
     image: img,
-  }
+  },
 ];
 
 export default function Team() {
+  const { t } = useTranslation(); // Initialize translation hook
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  useEffect(()=>{
-      document.title = "Team"
-    }, [])
+
+  useEffect(() => {
+    document.title = t("team.title"); // Set the page title dynamically
+  }, [t]);
 
   return (
     <RootLayout>
       <div className="bg-gradient-to-t from-blue-950 to-gray-200 min-h-screen p-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-center text-blue-950 mb-8">
-            Our Team
+            {t("team.heading")}
           </h1>
           <p className="text-lg text-gray-700 mb-8 text-center">
-            Meet the talented individuals behind Tech Challenges.
+            {t("team.description")}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

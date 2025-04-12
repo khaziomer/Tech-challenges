@@ -1,0 +1,225 @@
+{
+  "about us": "About us",
+  "projects": "Projects",
+  "our services": "Our services",
+  "reach us": "Reach us",
+  "hero": {
+    "title": "Tech Challenges",
+    "tagline": "Empowering Minds | Building Innovative Solutions",
+    "description": "We help transform complex challenges into innovative digital solutions for businesses, startups, and individuals. Join us in building smarter, future-ready technologies."
+  },
+  "services": {
+    "Solutions": {
+      "title": "TC Solutions",
+      "description": "Solutions Services"
+    },
+    "Software": {
+      "title": "TC Development",
+      "description": "Development Services"
+    },
+    "Secure": {
+      "title": "TC Secure",
+      "description": "Cybersecurity Services"
+    },
+    "Cable": {
+      "title": "TC Cable",
+      "description": "Connection Services"
+    },
+    "Integrated": {
+      "title": "TC Integrated",
+      "description": "Integrated Services"
+    },
+    "Database": {
+      "title": "TC Database",
+      "description": "Database Services"
+    },
+    "Consult": {
+      "title": "TC Consult",
+      "description": "Consultation Services"
+    },
+    "intro_line1": "What",
+    "intro_line2": "We Do!",
+    "tap_hint": "Tap on me"
+  },
+  "founders": {
+    "title": "Founders",
+    "quote": "\"Innovation distinguishes between a leader and a follower.\" - Steve Jobs",
+    "button": "Meet Our Team",
+    "ahmed": {
+      "name": "Ahmed Mohiuddin Khazi",
+      "role": "CEO",
+      "description": "Ahmed is the visionary leader of Tech Challenges, with over 20 years of experience in the technology industry. His strategic thinking and leadership have been instrumental in driving the company's success."
+    },
+    "fahad": {
+      "name": "Fahad Nawaf",
+      "role": "COO",
+      "description": "Fahad is the operational mastermind behind Tech Challenges, with a wealth of experience in optimizing processes and managing day-to-day activities. His focus on efficiency ensures the smooth running of our organization."
+    }
+  },
+  "tech_support": {
+    "title": "Our Collaborations",
+    "description": "We are proud to collaborate with these esteemed companies.",
+    "button": "Meet Our Team",
+    "companies": {
+      "grandstream": "Grandstream",
+      "cisco": "Cisco",
+      "dell": "Dell",
+      "visual_studio": "Visual Studio",
+      "fortinet": "Fortinet",
+      "huawei": "Huawei",
+      "microsoft": "Microsoft"
+    }
+  },
+  "footer": {
+    "company_name": "Tech Challenges",
+    "company_description": "Leading technology solutions provider in Saudi Arabia, helping businesses transform through innovative digital solutions.",
+    "quick_links": "Quick Links",
+    "links": {
+      "team": "Team",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "projects": "Projects",
+      "services": "Our Services",
+      "connections": "Connections"
+    },
+    "contact_us": "Contact Us",
+    "contact": {
+      "address": "Riyadh, Kingdom of Saudi Arabia",
+      "phone": "+966 (11) 288 5656",
+      "email": "info@techchallenges.sa"
+    },
+    "location": "Our Location",
+    "copyright": "Tech Challenges. All rights reserved."
+  },
+  "about": {
+    "title": "About Us",
+    "heading": "About Us",
+    "description": "Welcome to Tech Challenges! We are a leading technology solutions provider in Saudi Arabia, dedicated to helping businesses transform through innovative digital solutions. Our team of experts is committed to delivering high-quality services that meet the unique needs of our clients.",
+    "mission": {
+      "heading": "Our Mission",
+      "description": "Our mission is to empower businesses with cutting-edge technology solutions that drive growth and success. We strive to be a trusted partner for our clients, providing them with the tools and support they need to thrive in the digital age."
+    },
+    "vision": {
+      "heading": "Our Vision",
+      "description": "Our vision is to be the leading technology solutions provider in the region, known for our innovation, expertise, and commitment to excellence. We aim to create a positive impact on the businesses we serve and the communities we operate in."
+    },
+    "values": {
+      "heading": "Our Values",
+      "list": [
+        "Innovation: We embrace change and continuously seek new ways to improve our solutions and services.",
+        "Integrity: We conduct our business with honesty and transparency, building trust with our clients and partners.",
+        "Excellence: We strive for excellence in everything we do, delivering high-quality solutions that exceed expectations.",
+        "Collaboration: We believe in the power of teamwork and work closely with our clients to achieve their goals.",
+        "Customer Focus: We put our clients at the center of everything we do, ensuring their satisfaction and success."
+      ]
+    },
+    "history": {
+      "heading": "Our History",
+      "description": "Founded in 2010, Tech Challenges has grown from a small startup to a leading technology solutions provider in Saudi Arabia. Over the years, we have expanded our services and expertise, helping numerous businesses achieve their digital transformation goals."
+    },
+    "images": {
+      "company": "Company",
+      "mission": "Mission",
+      "vision": "Vision",
+      "values": "Values",
+      "history": "History"
+    }
+  },
+  "collab": {
+    "title": "Our Collaborations",
+    "heading": "Our Collaborations",
+    "description": "We are proud to collaborate with these esteemed companies.",
+    "companies": {
+      "cisco": "Cisco",
+      "microsoft_dynamic": "Microsoft Dynamics",
+      "grandstream": "Grandstream",
+      "huawei": "Huawei",
+      "fortinet": "Fortinet",
+      "dell": "Dell",
+      "visual_studio": "Visual Studio",
+      "microsoft": "Microsoft",
+      "barracuda": "Barracuda",
+      "php": "PHP",
+      "quest": "Quest",
+      "symantec": "Symantec",
+      "sectona": "Sectona",
+      "xamarin": "Xamarin"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "heading": "Contact Us",
+    "description": "We would love to hear from you! Please reach out to us using the contact information below.",
+    "location": {
+      "heading": "Our Location",
+      "address": "Riyadh, Kingdom of Saudi Arabia"
+    },
+    "info": {
+      "heading": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Office Hours",
+      "office_hours": "Monday to Thursday, 9:00 AM to 6:00 PM",
+      "support": "Support",
+      "support_email": "For support inquiries, please email"
+    },
+    "form": {
+      "heading": "Get in Touch",
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "Your email",
+      "message": "Message",
+      "message_placeholder": "Your message",
+      "submit": "Send Message",
+      "subject": "Contact Form Submission"
+    }
+  },
+  "service": {
+    "title": "Our Services",
+    "heading": "Our Services",
+    "description": "At Tech Challenges, we offer a wide range of services to help businesses achieve their technology goals. Our team of experts is dedicated to providing high-quality solutions tailored to meet the unique needs of each client.",
+    "ict": {
+      "heading": "ICT Solutions",
+      "description": "We provide comprehensive ICT solutions to help businesses improve their communication and information systems. Our services include network design and implementation, IT infrastructure management, and cloud computing solutions."
+    },
+    "software": {
+      "heading": "Software Development",
+      "description": "Our software development services include custom software solutions, mobile app development, and web development. We specialize in creating scalable and secure applications that meet the specific needs of our clients."
+    },
+    "cyber": {
+      "heading": "Cyber Security Solutions",
+      "description": "We offer advanced cyber security solutions to protect your business from cyber threats and ensure data security. Our services include vulnerability assessments, penetration testing, and security monitoring."
+    },
+    "out": {
+      "heading": "IT Outsourcing",
+      "description": "Our IT outsourcing services provide businesses with the expertise and support they need to manage their IT infrastructure. We offer a range of services, including help desk support, network management, and system administration."
+    },
+    "cable": {
+      "heading": "Structured Cabling",
+      "description": "We offer structured cabling solutions to ensure reliable and efficient communication networks for your business. Our services include the design, installation, and maintenance of cabling systems for data and voice networks."
+    },
+    "intergrated": {
+      "heading": "Integrated Solutions",
+      "description": "Our integrated solutions combine various technologies to create seamless and efficient systems for your business. We specialize in integrating hardware, software, and network components to deliver comprehensive solutions that meet your specific needs."
+    },
+    "sql": {
+      "heading": "SQL Consultancy",
+      "description": "We provide SQL consultancy services to help businesses optimize their database management and performance. Our services include database design, performance tuning, and disaster recovery planning."
+    },
+    "consultancy": {
+      "heading": "Backup, BC, and DR Consultancy",
+      "description": "Our consultancy services for backup, business continuity, and disaster recovery ensure that your business is prepared for any eventuality. We help you develop and implement comprehensive plans to protect your data and maintain operations during disruptions."
+    }
+  },
+  "project": {
+    "heading": "Our Projects",
+    "description": "These are some of the esteemed companies with whom we have successfully completed our projects."
+  },
+  "team": {
+    "title": "Our Team",
+    "heading": "Our Team",
+    "description": "Meet the talented individuals behind Tech Challenges."
+  }
+}

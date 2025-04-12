@@ -8,6 +8,7 @@ import Projects from './Pages/Projects';
 import Collab from './Pages/Collab';
 import Team from './Pages/team';
 import './App.css';
+import './i18n'; // Import i18n configuration
 
 function App() {
   return (

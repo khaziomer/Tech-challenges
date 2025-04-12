@@ -2,11 +2,14 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../assets/logo.png";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("en");
+  const [selectedLang, setSelectedLang] = useState(i18n.language || "en");
 
   const languages = [
     { code: "en", label: "English", flag: "🇬🇧" },
@@ -18,8 +21,17 @@ export default function Navbar() {
   const handleLangSelect = (code) => {
     setSelectedLang(code);
     setIsLangOpen(false);
-    // Optional: trigger actual language change logic here
+    i18n.changeLanguage(code); // Change the language
+    document.documentElement.dir = code === "ar" ? "rtl" : "ltr"; // Update text direction
   };
+
+  // Mapping route paths to keys for translation
+  const navLinks = [
+    { path: "/about", label: "about us" },
+    { path: "/projects", label: "projects" },
+    { path: "/services", label: "our services" },
+    { path: "/contact", label: "reach us" },
+  ];
 
   return (
     <nav className="bg-gray-200 shadow-sm mb-8">
@@ -38,19 +50,13 @@ export default function Navbar() {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
-            {["about", "projects", "services", "contact"].map((path) => (
+            {navLinks.map(({ path, label }) => (
               <a
                 key={path}
-                href={`/${path}`}
+                href={path}
                 className="text-secondary hover:text-blue-500 px-3 py-2 text-sm font-medium transition-colors"
               >
-                {path === "about"
-                  ? "About us"
-                  : path === "services"
-                  ? "Our services"
-                  : path === "contact"
-                  ? "Reach us"
-                  : "Projects"}
+                {t(label)}
               </a>
             ))}
 
@@ -60,8 +66,8 @@ export default function Navbar() {
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center text-secondary hover:text-blue-500 transition-colors"
               >
-                <span className="mr-1">{currentLang.flag}</span>
-                <span className="text-sm font-medium">{currentLang.label}</span>
+                <span className="mr-1">{currentLang?.flag}</span>
+                <span className="text-sm font-medium">{currentLang?.label}</span>
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {isLangOpen && (
@@ -96,19 +102,13 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden px-4 pt-2 pb-3 space-y-1">
-          {["about", "projects", "services", "contact"].map((path) => (
+          {navLinks.map(({ path, label }) => (
             <a
               key={path}
-              href={`/${path}`}
+              href={path}
               className="block px-3 py-2 text-base font-medium text-secondary hover:text-primary hover:bg-gray-100 rounded-md transition-colors"
             >
-              {path === "about"
-                ? "About us"
-                : path === "services"
-                ? "Our services"
-                : path === "contact"
-                ? "Reach us"
-                : "Projects"}
+              {t(label)}
             </a>
           ))}
 
@@ -119,8 +119,8 @@ export default function Navbar() {
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center w-full px-3 py-2 text-base font-medium text-secondary hover:text-primary hover:bg-gray-100 rounded-md transition-colors"
               >
-                <span className="mr-2">{currentLang.flag}</span>
-                <span>{currentLang.label}</span>
+                <span className="mr-2">{currentLang?.flag}</span>
+                <span>{currentLang?.label}</span>
                 <ChevronDown className="ml-auto w-4 h-4" />
               </button>
               {isLangOpen && (
