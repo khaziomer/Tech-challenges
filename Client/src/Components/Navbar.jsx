@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
@@ -23,7 +23,14 @@ export default function Navbar() {
     setIsLangOpen(false);
     i18n.changeLanguage(code); // Change the language
     document.documentElement.dir = code === "ar" ? "rtl" : "ltr"; // Update text direction
+    document.documentElement.lang = code; // Update the language attribute
   };
+
+  // Ensure the `dir` attribute is set correctly on initial load
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   // Mapping route paths to keys for translation
   const navLinks = [
