@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language || "en");
+  const [isScrolled, setIsScrolled] = useState(false); // New state for scroll tracking
 
   const languages = [
     { code: "en", label: "English", flag: "🇬🇧" },
@@ -24,6 +25,7 @@ export default function Navbar() {
     i18n.changeLanguage(code); // Change the language
     document.documentElement.dir = code === "ar" ? "rtl" : "ltr"; // Update text direction
     document.documentElement.lang = code; // Update the language attribute
+    window.location.reload(); // Refresh the page
   };
 
   // Ensure the `dir` attribute is set correctly on initial load
@@ -31,6 +33,22 @@ export default function Navbar() {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
+
+  // Listen for scroll events to track the scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true); // If scrolled down more than 50px, apply the effect
+      } else {
+        setIsScrolled(false); // If on top, remove the effect
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Mapping route paths to keys for translation
   const navLinks = [
@@ -41,9 +59,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-gray-200 shadow-sm mb-8">
-      <div className="w-full px-4 sm:px-6 lg:px-5">
-        <div className="flex justify-between h-24 items-center">
+    <nav
+      className={`bg-gray-200 shadow-sm mb-8 w-full sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-blue-500 shadow-lg" : "bg-gray-200 shadow-sm"
+      }`}
+    >
+      <div className="w-full px-0 sm:px-0 lg:px-0">
+        <div className="flex justify-between items-center h-24 w-full">
           {/* Logo */}
           <div className="flex items-center w-[15rem]">
             <a href="/" className="flex-shrink-0 w-full items-center">

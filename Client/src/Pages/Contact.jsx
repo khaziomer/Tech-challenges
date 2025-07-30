@@ -44,8 +44,9 @@ export default function Contact() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {/* Map Section */}
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-blue-950 mb-4">
+              <h2 className="text-2xl font-bold text-blue-950 mb-4 underline">
                 {t("contact.location.heading")}
               </h2>
               <p className="text-gray-700 mb-4">{t("contact.location.address")}</p>
@@ -61,10 +62,21 @@ export default function Contact() {
                   tabIndex="0"
                 ></iframe>
               </div>
+              <div className="text-center mt-4">
+                <a
+                  href="https://www.google.com/maps/place/24%C2%B039'47.6%22N+46%C2%B042'33.0%22E/@24.66323,46.709156,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-950 hover:text-red-400 underline"
+                >
+                  {t("contact.map_location.view_large_map")}
+                </a>
+              </div>
             </div>
 
+            {/* Contact Information Section */}
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-blue-950 mb-4">
+              <h2 className="text-2xl font-bold text-blue-950 mb-12 underline">
                 {t("contact.info.heading")}
               </h2>
               <p className="text-gray-700 mb-4">
@@ -106,6 +118,7 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Contact Form Section */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-blue-950 mb-4">
               {t("contact.form.heading")}

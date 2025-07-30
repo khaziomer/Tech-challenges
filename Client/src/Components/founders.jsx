@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // Import useTranslation
-import img from "../assets/img1.jpg";
+import img from "../assets/emp.webp";
 
 export default function Founders() {
   const { t } = useTranslation(); // Initialize translation hook

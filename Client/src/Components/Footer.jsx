@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/team"
-                  className="text-blue-950 hover:text-gray-400 transition-colors"
+                  className="text-blue-950 hover:text-red-400 transition-colors"
                 >
                   {t("footer.links.team")}
                 </a>
@@ -81,7 +81,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/about"
-                  className="text-blue-950 hover:text-gray-400 transition-colors"
+                  className="text-blue-950 hover:text-red-400 transition-colors"
                 >
                   {t("footer.links.about")}
                 </a>
@@ -89,7 +89,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/contact"
-                  className="text-blue-950 hover:text-gray-400 transition-colors"
+                  className="text-blue-950 hover:text-red-400 transition-colors"
                 >
                   {t("footer.links.contact")}
                 </a>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/projects"
-                  className="text-blue-950 hover:text-gray-400 transition-colors"
+                  className="text-blue-950 hover:text-red-400 transition-colors"
                 >
                   {t("footer.links.projects")}
                 </a>
@@ -105,7 +105,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/services"
-                  className="text-blue-950 hover:text-gray-400 transition-colors"
+                  className="text-blue-950 hover:text-red-400 transition-colors"
                 >
                   {t("footer.links.services")}
                 </a>
@@ -113,7 +113,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/collab"
-                  className="text-blue-950 hover:text-gray-400 transition-colors"
+                  className="text-blue-950 hover:text-red-400 transition-colors"
                 >
                   {t("footer.links.connections")}
                 </a>
@@ -159,7 +159,7 @@ export default function Footer() {
           {/* Google Map */}
           <div>
             <h3 className="text-xl font-semibold mb-6">{t("footer.location")}</h3>
-            <div className="w-full h-52 border rounded-lg overflow-hidden shadow-md">
+            <div className="w-full h-52 rounded-lg overflow-hidden shadow-md">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.123456789012!2d46.709156!3d24.66323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03e2f03e2f03%3A0x3e2f03e2f03e2f03!2s24%C2%B039'47.6%22N+46%C2%B042'33.0%22E!5e0!3m2!1sen!2s!4v1611234567890!5m2!1sen!2s"
                 width="100%"

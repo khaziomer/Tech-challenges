@@ -48,18 +48,18 @@
     "ahmed": {
       "name": "Ahmed Mohiuddin Khazi",
       "role": "Business Developement Manager",
-      "description": "Ahmed is the visionary leader of Tech Challenges, with over 20 years of experience in the technology industry. His strategic thinking and leadership have been instrumental in driving the company's success."
+      "description": "Ahmed has over 20 years of experience in the IT field and plays a key role in leading the growth vision at Tech Challenges. As a co-founder, his strategic thinking and deep understanding of business contribute to driving innovation, building partnerships, and achieving sustainable success for the company."
     },
     "fahad": {
       "name": "Fahad Al Rawaf",
       "role": "Manageing Director",
-      "description": "Fahad is the operational mastermind behind Tech Challenges, with a wealth of experience in optimizing processes and managing day-to-day activities. His focus on efficiency ensures the smooth running of our organization."
+      "description": "Fahad is the operational backbone of Tech Challenges, ensuring the smooth day-to-day functioning of the organization. His focus on efficiency and process optimization reflects his strength as both a co-founder and a leader in managing internal excellence."
     }
   },
   "tech_support": {
     "title": "Our Collaborations",
     "description": "We are proud to collaborate with these esteemed companies.",
-    "button": "Meet Our Team",
+    "button": "More",
     "companies": {
       "grandstream": "Grandstream",
       "cisco": "Cisco",
@@ -174,6 +174,11 @@
       "message_placeholder": "Your message",
       "submit": "Send Message",
       "subject": "Contact Form Submission"
+    },
+    "map_location": { 
+      "heading": "Our Map Location",
+      "address": "1234 Example Street, Riyadh, Kingdom of Saudi Arabia",
+      "view_large_map": "View Larger Map"
     }
   },
   "service": {
@@ -214,6 +219,7 @@
     }
   },
   "project": {
+    "title": "Projects",
     "heading": "Our Projects",
     "description": "These are some of the esteemed companies with whom we have successfully completed our projects."
   },

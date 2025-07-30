@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react"; // Import useEffect
 import RootLayout from "../Layout";
 import { useTranslation } from "react-i18next"; // Import useTranslation
 import logo1 from "../assets/collab_comp/logo1.png";
@@ -33,28 +33,32 @@ const projects = [
   { name: "Axelerated Soultions", image: logo4 },
   { name: "VOX Cinemas", image: logo5 },
   { name: "Othaim", image: logo6 },
-  { name: "PNU", image: logo7 },
-  { name: "Project Theta", image: logo8 },
-  { name: "Project Iota", image: logo9 },
-  { name: "Project Kappa", image: logo10 },
-  { name: "Project Lambda", image: logo11 },
-  { name: "Project Mu", image: logo12 },
-  { name: "Project Nu", image: logo13 },
-  { name: "Project Xi", image: logo14 },
-  { name: "Project Omicron", image: logo15 },
-  { name: "Project Pi", image: logo16 },
-  { name: "Project Rho", image: logo17 },
-  { name: "Project Sigma", image: logo18 },
-  { name: "Project Tau", image: logo19 },
-  { name: "Project Upsilon", image: logo20 },
-  { name: "Project Phi", image: logo21 },
-  { name: "Project Chi", image: logo22 },
-  { name: "Project Psi", image: logo23 },
-  { name: "Project Omega", image: logo24 },
+  { name: "princess Nourah Bint Abdul Rahman University", image: logo7 },
+  { name: "Taqnia", image: logo8 },
+  { name: "Abdul Latif Jameel", image: logo9 },
+  { name: "U-Mark Sport", image: logo10 },
+  { name: "Arasco", image: logo11 },
+  { name: "Al raidah", image: logo12 },
+  { name: "Al munajem", image: logo13 },
+  { name: "Habtoor Leighton Group", image: logo14 },
+  { name: "Solidarity", image: logo15 },
+  { name: "Shaqra University", image: logo16 },
+  { name: "Saudi Red Crescent Authority", image: logo17 },
+  { name: "iNet", image: logo18 },
+  { name: "Mobisat", image: logo19 },
+  { name: "Fipco", image: logo20 },
+  { name: "PepsiCo", image: logo21 },
+  { name: "Ejada", image: logo22 },
+  { name: "Arab Open University", image: logo23 },
+  { name: "Al Bawani", image: logo24 },
 ];
 
 export default function Projects() {
   const { t } = useTranslation(); // Initialize translation hook
+
+  useEffect(() => {
+    document.title = t("project.title"); // Set the page title dynamically
+  }, [t]);
 
   return (
     <RootLayout>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import RootLayout from "../Layout";
 import { useTranslation } from "react-i18next";
-import img from "../assets/img1.jpg";
+import img from "../assets/emp.webp";
 import { Mail, Linkedin } from "lucide-react";
 
 export default function Team() {
