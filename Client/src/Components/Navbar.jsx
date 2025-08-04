@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
 
@@ -10,7 +10,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(i18n.language || "en");
-  const [isScrolled, setIsScrolled] = useState(false); // New state for scroll tracking
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false); // Dark mode state
 
   const languages = [
     { code: "en", label: "English", flag: "🇬🇧" },
@@ -22,11 +23,34 @@ export default function Navbar() {
   const handleLangSelect = (code) => {
     setSelectedLang(code);
     setIsLangOpen(false);
-    i18n.changeLanguage(code); // Change the language
-    document.documentElement.dir = code === "ar" ? "rtl" : "ltr"; // Update text direction
-    document.documentElement.lang = code; // Update the language attribute
-    window.location.reload(); // Refresh the page
+    i18n.changeLanguage(code);
+    document.documentElement.dir = code === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = code;
+    window.location.reload();
   };
+
+  // Dark mode toggle function
+  const toggleDarkMode = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("darkMode", "true");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("darkMode", "false");
+    }
+  };
+
+  // Initialize dark mode from localStorage
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    if (savedDarkMode === "true") {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
   // Ensure the `dir` attribute is set correctly on initial load
   useEffect(() => {
@@ -38,9 +62,9 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setIsScrolled(true); // If scrolled down more than 50px, apply the effect
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false); // If on top, remove the effect
+        setIsScrolled(false);
       }
     };
 
@@ -89,6 +113,16 @@ export default function Navbar() {
               </a>
             ))}
 
+            {/* Dark mode toggle button */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 text-secondary hover:text-blue-500 transition-all duration-300 rounded-full hover:bg-gray-100"
+              aria-label="Toggle dark mode"
+              title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
             {/* Language dropdown */}
             <div className="relative border-l pl-4 ml-4 border-gray-600">
               <button
@@ -117,7 +151,17 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile dark mode toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 text-secondary hover:text-primary transition-all duration-300 rounded-full"
+              aria-label="Toggle dark mode"
+              title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-secondary hover:text-primary hover:bg-gray-100 focus:outline-none transition-colors"
